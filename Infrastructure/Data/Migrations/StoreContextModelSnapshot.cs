@@ -52,6 +52,8 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasIndex("ProductBrandId");
 
+                    b.HasIndex("ProductTypeId");
+
                     b.ToTable("Products");
                 });
 
@@ -95,7 +97,7 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasOne("Core.Entities.ProductType", "ProductType")
                         .WithMany()
-                        .HasForeignKey("ProductBrandId")
+                        .HasForeignKey("ProductTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
