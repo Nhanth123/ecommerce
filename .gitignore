@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-appsettings.json
-=======
 
->>>>>>> 502759ea8d9bd93dbf5efa09625ce9098495e019
+appsettings.json
+
 *.db
 
 ## Ignore Visual Studio temporary files, build results, and
