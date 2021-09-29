@@ -10,7 +10,7 @@ import { IProduct } from '../shared/models/product';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
-  @ViewChild('search', { static: true }) searchTerm: ElementRef;
+  @ViewChild('search', { static: false }) searchTerm: ElementRef;
 
   products: IProduct[];
   brands: IBrand[];
@@ -80,7 +80,7 @@ export class ShopComponent implements OnInit {
   }
 
   onPageChanged(event: any){
-    if(this.shopParams.pageNumber! == event){
+    if(this.shopParams.pageNumber !== event){
       this.shopParams.pageNumber = event;
       this.getProducts();
     }

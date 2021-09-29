@@ -25,7 +25,6 @@ export class ErrorInterceptor implements HttpInterceptor {
             } else {
               this.toastr.error(error.error.message, error.error.statusCode);
             }
-
           }
           if (error.status === 401) {
             this.toastr.error(error.error.message, error.error.statusCode);
