@@ -458,5 +458,4 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.vs/Ecommerce/DesignTimeBuild/.dtbcache.v2
-.vs/Ecommerce/v16/.suo
+.vs
