@@ -5,22 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Core\**" />
-    <Compile Remove="Data\**" />
-    <Compile Remove="Entities\**" />
-    <Compile Remove="Infrastructure\**" />
-    <Content Remove="Core\**" />
-    <Content Remove="Data\**" />
-    <Content Remove="Entities\**" />
-    <Content Remove="Infrastructure\**" />
-    <EmbeddedResource Remove="Core\**" />
-    <EmbeddedResource Remove="Data\**" />
-    <EmbeddedResource Remove="Entities\**" />
-    <EmbeddedResource Remove="Infrastructure\**" />
-    <None Remove="Core\**" />
-    <None Remove="Data\**" />
-    <None Remove="Entities\**" />
-    <None Remove="Infrastructure\**" />
+	  <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
