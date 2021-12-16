@@ -71,7 +71,6 @@ namespace API.Controllers
             return BadRequest("Problem updating the user");
         }
 
-
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -94,6 +93,10 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
+            if (CheckEmailExistsAsync(registerDto.Email).Result.Value)
+            {
+                return new BadRequestObjectResult(new ApiValidationErrorResponse { Errors = new[] { "Email address is in use" } });
+            }
             var user = new AppUser
             {
                 DisplayName = registerDto.DisplayName,
@@ -112,8 +115,5 @@ namespace API.Controllers
                 Email = user.Email
             };
         }
-
-
-
     }
 }
