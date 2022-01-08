@@ -8,6 +8,7 @@ import { ServerErrorComponent } from './server-error/server-error.component';
 import { SectioHeaderComponent } from './sectio-header/sectio-header.component';
 import {BreadcrumbModule} from 'xng-breadcrumb';
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [NavBarComponent, TestErrorComponent, NotFoundComponent, ServerErrorComponent, SectioHeaderComponent],
@@ -15,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     RouterModule,
     BreadcrumbModule,
+    SharedModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       preventDuplicates: true

@@ -2,7 +2,6 @@
   <div *ngIf="(basket$ | async) === null">
     <p>There are no items in your basket</p>
   </div>
-
   <div *ngIf="basket$ | async">
     <div class="pb-5">
       <div class="container">

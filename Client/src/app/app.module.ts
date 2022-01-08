@@ -11,10 +11,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -23,13 +20,12 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
     CoreModule,
     AppRoutingModule,
     HomeModule,
-    NgxSpinnerModule
-
+    NgxSpinnerModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
