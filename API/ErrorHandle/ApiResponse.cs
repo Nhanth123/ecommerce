@@ -15,6 +15,7 @@
                 400 => "A bad request you have made",
                 401 => "You are not authorized",
                 404 => "Resource not found",
+                405 => "Method not allowed",
                 500 => "Error are the path to dark side.",
                 _ => null
             };

@@ -26,7 +26,6 @@ namespace API
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>x.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<StoreContext>(x => x.UseSqlServer("Server=DESKTOP-AK4UPFQ;Database = Ecommerce;Trusted_Connection = True"));
             services.AddDbContext<AppIdentityDbContext>(x =>x.UseSqlServer(_config.GetConnectionString("IdentityConnection")));
 
             services.AddSingleton<IConnectionMultiplexer>(c =>
