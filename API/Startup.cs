@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using StackExchange.Redis;
 
 namespace API
@@ -50,10 +51,12 @@ namespace API
         {
             app.UseMiddleware<ExceptionMiddleware>();
 
-            app.UseSwaggerDocumentation();
+            if (env.IsDevelopment())
+            {
+                app.UseSwaggerDocumentation();
+            }
 
             app.UseStatusCodePagesWithReExecute("/errors/{0}");
-
             
             app.UseHttpsRedirection();
             

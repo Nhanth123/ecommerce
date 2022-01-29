@@ -1,11 +1,7 @@
-﻿using Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core.OrderAggregate
+namespace Core.Entities.OrderAggregate
 {
     public class Order : BaseEntity
     {
@@ -21,7 +17,6 @@ namespace Core.OrderAggregate
             DeliveryMethod = deliveryMethod;
             OrderItems = orderItems;
             Subtotal = subtotal;
-
         }
 
         public string BuyerEmail { get; set; }

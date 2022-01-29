@@ -1,5 +1,5 @@
 ﻿using Core.Entities;
-using Core.OrderAggregate;
+using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
