@@ -461,3 +461,5 @@ $RECYCLE.BIN/
 .vs
 ## Redis 
 *.rdb
+/*.user
+/*.user
