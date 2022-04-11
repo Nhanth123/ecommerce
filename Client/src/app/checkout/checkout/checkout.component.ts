@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { IBasketTotals } from 'src/app/shared/models/basket';
 import { BasketService } from 'src/app/basket/basket.service';
 
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
